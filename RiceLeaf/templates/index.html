@@ -1,0 +1,137 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+<nav class="navbar navbar-expand-lg bg-body-primary  py-4 shadow">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">{{APP_NAME}}</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item me-5">
+                    <a class=" nav-link  px-2" href="{% url 'login' user_type='user' %}">Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="">
+    <div id="carouselExampleCaptions" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{% static 'images/second.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Abstract</h5>
+                    <p>
+                      Rice is a staple food for millions worldwide, yet its productivity
+                      and quality are often threatened by diseases. This issue is
+                      particularly significant in Dakshina Kannada, Karnataka, known for
+                      its extensive cultivation of the MO4 rice variety, which is highly
+                      susceptible to diseases such as bacterial leaf blight, sheath
+                      blight, and neck blast. Early and accurate detection of these
+                      diseases is essential for effective management strategies. To
+                      address this, we propose a deep learning- based model leveraging
+                      convolutional neural networks (CNNs) for the reliable identification
+                      and classification of rice leaf diseases. Our research involved
+                      compiling a comprehensive dataset of healthy and diseased MO4 rice
+                      leaf images, meticulously annotated for precision. By fine-tuning
+                      state-of-the-art CNNs, the model demonstrates high accuracy,
+                      precision, recall, and F1 score in detecting diseases. Extensive
+                      testing ensures its robustness in real-world scenarios. The model
+                      offers farmers and agricultural officers a practical tool for early
+                      diagnosis, enabling timely intervention to reduce crop losses and
+                      promote sustainable agriculture. Experimental results highlight its
+                      potential to revolutionize rice disease management in Dakshina
+                      Kannada and similar regions, paving the way for intelligent
+                      agricultural systems that enhance productivity and ensure food
+                      security..
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/third.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Abstract</h5>
+                    <p>
+                      Rice is a staple food for millions worldwide, yet its productivity
+                      and quality are often threatened by diseases. This issue is
+                      particularly significant in Dakshina Kannada, Karnataka, known for
+                      its extensive cultivation of the MO4 rice variety, which is highly
+                      susceptible to diseases such as bacterial leaf blight, sheath
+                      blight, and neck blast. Early and accurate detection of these
+                      diseases is essential for effective management strategies. To
+                      address this, we propose a deep learning- based model leveraging
+                      convolutional neural networks (CNNs) for the reliable identification
+                      and classification of rice leaf diseases. Our research involved
+                      compiling a comprehensive dataset of healthy and diseased MO4 rice
+                      leaf images, meticulously annotated for precision. By fine-tuning
+                      state-of-the-art CNNs, the model demonstrates high accuracy,
+                      precision, recall, and F1 score in detecting diseases. Extensive
+                      testing ensures its robustness in real-world scenarios. The model
+                      offers farmers and agricultural officers a practical tool for early
+                      diagnosis, enabling timely intervention to reduce crop losses and
+                      promote sustainable agriculture. Experimental results highlight its
+                      potential to revolutionize rice disease management in Dakshina
+                      Kannada and similar regions, paving the way for intelligent
+                      agricultural systems that enhance productivity and ensure food
+                      security..
+                    </p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="{% static 'images/first.jpg' %}" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Abstract</h5>
+                    <p>
+                      Rice is a staple food for millions worldwide, yet its productivity
+                      and quality are often threatened by diseases. This issue is
+                      particularly significant in Dakshina Kannada, Karnataka, known for
+                      its extensive cultivation of the MO4 rice variety, which is highly
+                      susceptible to diseases such as bacterial leaf blight, sheath
+                      blight, and neck blast. Early and accurate detection of these
+                      diseases is essential for effective management strategies. To
+                      address this, we propose a deep learning- based model leveraging
+                      convolutional neural networks (CNNs) for the reliable identification
+                      and classification of rice leaf diseases. Our research involved
+                      compiling a comprehensive dataset of healthy and diseased MO4 rice
+                      leaf images, meticulously annotated for precision. By fine-tuning
+                      state-of-the-art CNNs, the model demonstrates high accuracy,
+                      precision, recall, and F1 score in detecting diseases. Extensive
+                      testing ensures its robustness in real-world scenarios. The model
+                      offers farmers and agricultural officers a practical tool for early
+                      diagnosis, enabling timely intervention to reduce crop losses and
+                      promote sustainable agriculture. Experimental results highlight its
+                      potential to revolutionize rice disease management in Dakshina
+                      Kannada and similar regions, paving the way for intelligent
+                      agricultural systems that enhance productivity and ensure food
+                      security..
+                    </p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+</div>
+
+{% endblock content %}

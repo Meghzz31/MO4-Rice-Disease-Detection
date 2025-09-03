@@ -1,0 +1,126 @@
+version: "3.1"
+
+rules:
+  - rule: Say 'I am a bot' anytime the user challenges
+    steps:
+      - intent: bot_challenge
+      - action: utter_iamabot
+
+  - rule: Greet user
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - rule: Respond to overview
+    steps:
+      - intent: ask_overview
+      - action: utter_ask_overview
+
+  - rule: Respond to precautions
+    steps:
+      - intent: ask_precautions
+      - action: utter_ask_precautions
+
+  - rule: Respond to remedies
+    steps:
+      - intent: ask_remedies
+      - action: utter_ask_remedies
+
+  - rule: Respond to growth stages
+    steps:
+      - intent: ask_growth_stage
+      - action: utter_ask_growth_stage
+
+  - rule: Respond to yield query
+    steps:
+      - intent: ask_yield
+      - action: utter_ask_yield
+
+  - rule: Respond to diseases
+    steps:
+      - intent: ask_diseases
+      - action: utter_ask_diseases
+
+  - rule: Respond to soil requirements
+    steps:
+      - intent: ask_soil_requirements
+      - action: utter_ask_soil_requirements
+
+  - rule: Say goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - rule: Provide disease overview
+    condition:
+      - slot_was_set:
+          - disease
+    steps:
+      - intent: ask_disease_overview
+      - action: action_provide_disease_overview
+
+  - rule: Provide disease precautions
+    condition:
+      - slot_was_set:
+          - disease
+    steps:
+      - intent: ask_disease_precautions
+      - action: action_provide_disease_precautions
+
+  - rule: Provide disease remedies
+    condition:
+      - slot_was_set:
+          - disease
+    steps:
+      - intent: ask_disease_remedies
+      - action: action_provide_disease_remedies
+
+  - rule: Respond to fertilizer types query
+    steps:
+      - intent: ask_fertilizer_types
+      - action: utter_fertilizer_types
+
+  - rule: Respond to fertilizer application time query
+    steps:
+      - intent: ask_fertilizer_application_time
+      - action: utter_fertilizer_application_time
+
+  - rule: Respond to fertilizer quantity query
+    steps:
+      - intent: ask_fertilizer_quantity
+      - action: utter_fertilizer_quantity
+
+  - rule: Respond to organic vs inorganic fertilizer query
+    steps:
+      - intent: ask_fertilizer_organic_vs_inorganic
+      - action: utter_fertilizer_organic_vs_inorganic
+
+  - rule: Respond to fertilizer nutrient content query
+    steps:
+      - intent: ask_fertilizer_nutrient_content
+      - action: utter_fertilizer_nutrient_content
+
+  - rule: Respond to fertilizer usage guidelines query
+    steps:
+      - intent: ask_fertilizer_usage_guidelines
+      - action: utter_fertilizer_usage_guidelines
+
+  - rule: Respond to fertilizer effect on yield query
+    steps:
+      - intent: ask_fertilizer_effect_on_yield
+      - action: utter_fertilizer_effect_on_yield
+
+  - rule: Respond to fertilizer suggestions query
+    steps:
+      - intent: ask_fertilizer_suggestions
+      - action: utter_fertilizer_suggestions
+
+  - rule: Respond to fertilizer preference for soil query
+    steps:
+      - intent: ask_fertilizer_preference_for_soil
+      - action: utter_fertilizer_preference_for_soil
+
+  - rule: Respond to fertilizer side effects query
+    steps:
+      - intent: ask_fertilizer_side_effects
+      - action: utter_fertilizer_side_effects

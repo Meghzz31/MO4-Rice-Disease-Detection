@@ -1,0 +1,874 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+      - Hey! How are you?
+      - Hi there! How’s it going?
+      - Hello! How are you today?
+      - Hey! What’s up?
+      - Hi! How are things with you?
+      - Good to see you! How's everything?
+      - Hello, how's your day going?
+      - Hey! How have you been?
+      - Hi! How’s life treating you?
+      - Greetings! How’s everything?
+      - Hey, how are you doing today?
+      - Hi! What’s new with you?
+      - Hello! How’s everything going for you?
+      - Hey! How are things on your end?
+      - What’s up? How’s it going?
+      - Hi there! How’s life?
+      - Hello! How’s your day treating you?
+      - Hey! How’s everything going?
+      - Hi! What’s going on with you today?
+      - Hey! How have you been doing?
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+      - take care
+      - talk to you later
+      - catch you later
+      - until next time
+      - see ya
+      - farewell
+      - I'm out
+      - adios
+      - peace out
+      - later
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - are you real?
+      - is this a bot?
+      - who is talking to me?
+      - is there a person behind this?
+      - are you automated?
+      - am I chatting with a bot?
+      - are you artificial intelligence?
+      - is there someone controlling you?
+      - do you have a real brain?
+      - do you have feelings?
+      - are you machine learning?
+      - are you a robot?
+      - is there a human behind this conversation?
+      - what kind of bot are you?
+      - are you real or just AI?
+      - do you understand me?
+
+  - intent: ask_overview
+    examples: |
+      - Tell me about paddy farming.
+      - What is paddy?
+      - Can you provide an overview of paddy?
+      - Give me a brief about paddy farming.
+      - What do I need to know about paddy?
+      - Explain paddy cultivation.
+      - What is the importance of paddy farming?
+      - How is paddy grown?
+      - Can you tell me the basics of paddy farming?
+      - What are the key features of paddy farming?
+      - Provide an overview of rice farming.
+      - What is paddy cultivation?
+      - Tell me the general information about paddy farming.
+      - I want to know about paddy cultivation.
+      - Can you summarize paddy farming?
+      - Give me details about paddy.
+      - What are the fundamentals of paddy farming?
+      - Can you explain paddy agriculture?
+      - I want to know about paddy farming.
+      - How does paddy grow?
+      - Describe the process of paddy farming.
+      - What is rice cultivation all about?
+      - What should I know about paddy cultivation?
+      - Give me a summary of paddy farming.
+      - What’s the general idea of paddy farming?
+      - Tell me the basics of paddy agriculture.
+      - How does paddy cultivation work?
+      - What’s involved in paddy farming?
+      - Provide a description of paddy cultivation.
+      - What is the background of paddy farming?
+      - Can you give me insights into paddy farming?
+      - Share information about paddy.
+      - What’s the history of paddy farming?
+      - Tell me about rice farming.
+      - What’s important about paddy cultivation?
+      - How is paddy produced?
+      - Can you explain how paddy is grown?
+      - What is paddy farming known for?
+      - What makes paddy farming unique?
+      - Explain the key steps in paddy farming.
+      - What does paddy farming involve?
+      - What’s the method of growing paddy?
+      - Tell me how rice is cultivated.
+      - What’s the overview of paddy farming?
+      - Explain rice cultivation methods.
+      - What do farmers do in paddy farming?
+      - What are the steps in rice cultivation?
+      - Can you brief me about paddy farming?
+      - What’s the essential information about paddy farming?
+      - How is rice grown in paddy fields?
+
+  - intent: ask_precautions
+    examples: |
+      - What precautions should I take for paddy farming?
+      - How to protect paddy crops?
+      - Tell me precautions for growing paddy.
+      - What should I do to protect paddy from pests?
+      - How can I safeguard paddy from diseases?
+      - What are the best precautions for paddy farming?
+      - What measures should I take to protect paddy fields?
+      - Can you give me advice on paddy crop protection?
+      - How do I avoid diseases in paddy farming?
+      - What are the key precautions for paddy cultivation?
+      - How can I protect paddy from natural calamities?
+      - Tell me how to prevent pest infestations in paddy.
+      - What should I do to ensure healthy paddy crops?
+      - How to avoid waterlogging in paddy fields?
+      - What are the preventive measures for paddy crops?
+      - How can I protect paddy from fungal diseases?
+      - What steps can I take to prevent soil erosion in paddy fields?
+      - How to ensure proper irrigation for paddy farming?
+      - What precautions are necessary for paddy during the rainy season?
+      - How do I prevent nutrient deficiency in paddy?
+      - Can you suggest precautions for growing paddy in dry areas?
+      - How to avoid over-fertilizing paddy crops?
+      - What precautions should I take during transplanting paddy?
+      - How do I protect paddy from bird damage?
+      - What are the precautions for paddy during the flowering stage?
+      - How can I protect paddy from rodents?
+      - What should I know about pest management in paddy?
+      - What precautions should be taken to control paddy weeds?
+      - How do I prevent disease spread in paddy fields?
+      - What steps should I follow for healthy paddy cultivation?
+      - How to prevent plant diseases in paddy?
+      - What precautions should I take for paddy before harvest?
+      - How to ensure good water management in paddy farming?
+      - What measures should be taken for pest control in paddy fields?
+      - How can I protect paddy from excessive rainfall?
+      - What precautions should I take during paddy transplanting?
+      - How to prevent fungal infections in paddy crops?
+      - What are the key steps to follow for successful paddy farming?
+      - How can I avoid soil compaction in paddy fields?
+      - What should I do to avoid water stress in paddy crops?
+      - How can I prevent contamination in paddy fields?
+      - What should I do to avoid crop diseases in paddy?
+      - How to prevent the spread of bacteria in paddy fields?
+      - What precautions should I take when planting paddy?
+      - How can I ensure proper spacing for paddy plants?
+      - What steps should I take to avoid pest outbreaks in paddy fields?
+      - How to manage irrigation effectively in paddy farming?
+      - What are the necessary precautions for growing paddy in tropical regions?
+      - How to maintain soil fertility for paddy?
+      - What are the general precautions when cultivating paddy?
+
+  - intent: ask_remedies
+    examples: |
+      - What should I do if my paddy crop is facing issues?
+      - What can I do to solve problems in my paddy farming?
+      - How can I improve the health of my paddy crop?
+      - What should I do if my paddy crops are not doing well?
+      - What can be done to fix problems in my paddy fields?
+      - How to handle issues in paddy cultivation?
+      - What are the best practices to solve problems in paddy farming?
+      - How can I overcome challenges in paddy cultivation?
+      - What are the solutions for improving paddy crop health?
+      - How can I troubleshoot issues in my paddy farming?
+      - What steps can I take to fix problems in paddy farming?
+      - How to restore the health of my paddy crops?
+      - What actions should I take to improve my paddy farming?
+      - What can I do if my paddy plants are not growing properly?
+      - How do I recover my paddy crops from issues?
+      - What measures can I take to improve my paddy crop production?
+      - How to address problems in paddy cultivation effectively?
+      - What are some remedies for common paddy farming issues?
+      - How can I fix problems that affect paddy crops?
+      - What solutions can I apply to improve the growth of my paddy plants?
+      - How can I deal with challenges in paddy cultivation?
+      - What general measures can I take to solve issues in paddy farming?
+      - What actions should I take if my paddy crop is facing difficulties?
+      - How can I enhance the health and growth of my paddy crop?
+
+  - intent: ask_growth_stage
+    examples: |
+      - What are the growth stages of paddy?
+      - Tell me about paddy growth stages.
+      - What are the different stages in the growth of paddy?
+      - Can you explain the growth cycle of paddy?
+      - What are the key growth stages of paddy plants?
+      - How does paddy develop from planting to harvest?
+      - Describe the growth stages of a paddy plant.
+      - What is the growth process of paddy crops?
+      - How many stages are there in paddy growth?
+      - Tell me about the phases of paddy growth.
+      - What happens during the germination stage of paddy?
+      - How does paddy grow after sowing?
+      - What are the stages from sowing to harvesting paddy?
+      - How does paddy develop during the tillering stage?
+      - Can you explain the booting stage in paddy growth?
+      - What happens during the heading stage of paddy growth?
+      - Tell me about the ripening stage of paddy crops.
+      - What is the final stage of paddy growth?
+      - How long does the growth cycle of paddy take?
+      - What are the main stages in paddy plant development?
+      - Can you explain the tillering phase in paddy growth?
+      - What happens during the vegetative stage of paddy?
+      - Tell me about the flowering stage of paddy.
+      - How does paddy grow during the booting phase?
+      - What is the significance of the heading stage in paddy?
+      - Can you describe the stages of paddy growth from sowing to harvest?
+      - What are the critical growth stages for paddy farmers to monitor?
+      - How does paddy grow from seed to mature plant?
+      - How long does paddy stay in the ripening stage?
+      - What factors affect the growth stages of paddy?
+      - How does irrigation affect the growth stages of paddy?
+      - At what stage does paddy start flowering?
+      - What is the growth rate of paddy at each stage?
+      - How does paddy transition from tillering to booting?
+      - What happens in the vegetative stage of paddy growth?
+      - How can I tell if my paddy is at the heading stage?
+      - What does the tillering stage of paddy look like?
+      - When should paddy reach the flowering stage?
+      - How does the paddy plant change from one stage to another?
+      - What are the indicators that paddy is at the ripening stage?
+      - What happens to paddy after the booting stage?
+      - How do environmental conditions affect paddy growth stages?
+      - What is the booting phase in paddy growth?
+      - Can you describe the process of paddy ripening?
+      - At what stage do paddy plants mature?
+      - What signs show that paddy is moving to the heading stage?
+      - How do I know when my paddy is in the germination stage?
+      - How does temperature influence paddy growth stages?
+      - What happens to the paddy plant after heading?
+      - Can you tell me how to identify each growth stage of paddy?
+      - How does soil quality affect paddy growth stages?
+      - What are the stages of paddy growth in brief?
+      - How do pests affect the growth stages of paddy?
+
+  - intent: ask_yield
+    examples: |
+      - What is the yield of paddy?
+      - How much can I harvest from paddy per hectare?
+      - Tell me about paddy yield.
+      - What is the average yield of paddy?
+      - How much rice can I expect from one acre of paddy?
+      - What is the typical yield for paddy crops?
+      - How many tons of paddy can I harvest per hectare?
+      - What is the yield rate for paddy farming?
+      - Can you tell me the expected paddy yield per hectare?
+      - What factors affect the yield of paddy?
+      - How much paddy can I produce from one hectare of land?
+      - How do different varieties of paddy affect the yield?
+      - What is the paddy yield per acre?
+      - How much rice can I get from 1 acre of paddy?
+      - What is the yield of paddy in optimal conditions?
+      - What is the highest possible yield of paddy?
+      - Can the yield of paddy vary based on farming techniques?
+      - How much yield can I expect from paddy in a good season?
+      - What is the average paddy yield per hectare in my region?
+      - How does soil quality impact paddy yield?
+      - How do weather conditions affect paddy yield?
+      - What is the average yield of paddy in India?
+      - How do irrigation practices affect paddy yield?
+      - How much paddy can I expect to harvest from 2 hectares?
+      - How do crop management techniques influence paddy yield?
+      - How much can paddy yield per hectare with modern farming methods?
+      - Can I increase my paddy yield by improving irrigation?
+      - What is the yield of paddy in rain-fed versus irrigated areas?
+      - What are the different factors that affect paddy yield?
+      - How much can I expect in terms of paddy yield per year?
+      - What are the common yields for paddy in different regions?
+      - How does climate affect paddy yield?
+      - Can crop rotation improve the yield of paddy?
+      - How much does fertilizer use impact paddy yield?
+      - What is the difference in paddy yield between organic and conventional farming?
+      - How can I increase the yield of paddy on my farm?
+      - How much rice can I produce from 5 acres of paddy?
+      - What is the yield of paddy in the southern region?
+      - How does the planting density affect paddy yield?
+      - What is the paddy yield in a typical monsoon season?
+      - How much can I harvest if I plant a high-yield variety of paddy?
+      - What is the expected yield of paddy for hybrid varieties?
+      - Can I improve the yield of paddy with advanced technologies?
+      - How do pests and diseases impact paddy yield?
+      - What is the expected paddy yield from a small-scale farm?
+      - How does the quality of seed affect paddy yield?
+      - How much paddy should I expect to harvest if I practice sustainable farming?
+      - What is the average paddy yield in different farming systems?
+      - How do planting techniques influence the yield of paddy?
+      - Can I expect more yield by using organic pesticides for paddy?
+      - What kind of paddy yield can I expect from intensive farming methods?
+      - What is the yield difference between traditional and modern paddy farming techniques?
+      - How much paddy can I yield in a season with efficient water management?
+
+  - intent: ask_diseases
+    examples: |
+      - What diseases affect paddy?
+      - Tell me about paddy diseases.
+      - How can paddy diseases be managed?
+      - What are the common diseases in paddy farming?
+      - Which diseases are harmful to paddy crops?
+      - Can you list the diseases that affect paddy?
+      - How do I identify diseases in paddy?
+      - What are the symptoms of diseases in paddy plants?
+      - How can I prevent diseases in paddy?
+      - What is blast disease in paddy?
+      - Tell me about bacterial blight in paddy.
+      - What is sheath blight and how does it affect paddy?
+      - How can I protect my paddy crops from diseases?
+      - What diseases are most common in paddy fields?
+      - How can paddy plants be affected by fungus?
+      - What causes paddy diseases?
+      - How can I manage fungal diseases in paddy?
+      - What is the impact of diseases like blast on paddy?
+      - How do I treat paddy affected by bacterial blight?
+      - What are the signs of paddy plant diseases?
+      - Can paddy crops get infected by viruses?
+      - How do diseases like rice tungro affect paddy?
+      - What is the best way to control diseases in paddy?
+      - How do you treat sheath blight in paddy?
+      - What are the best practices to avoid paddy diseases?
+      - What role do pests play in spreading paddy diseases?
+      - How can I prevent the spread of rice blast in paddy?
+      - How do I recognize early signs of paddy diseases?
+      - What diseases should I watch out for during paddy growth?
+      - Can paddy diseases affect the yield?
+      - What are the remedies for common paddy diseases?
+      - How can I reduce the risk of paddy diseases?
+      - Are there organic treatments for paddy diseases?
+      - What is the treatment for leaf blight in paddy?
+      - How does wet weather influence the spread of paddy diseases?
+      - What are the symptoms of blast in paddy plants?
+      - How does rust affect paddy plants?
+      - How can I manage paddy diseases without chemicals?
+      - What is the best fungicide for treating paddy diseases?
+      - How do I prevent bacterial leaf blight in paddy?
+      - What are the preventive measures for paddy diseases?
+      - Can paddy diseases be controlled through irrigation?
+      - How do you prevent rice blast disease in paddy?
+      - What are the best practices to reduce paddy diseases?
+      - Can disease-resistant paddy varieties help manage diseases?
+      - What are the economic impacts of paddy diseases?
+      - What is the impact of sheath blight on paddy?
+      - How does bacterial blight affect paddy rice?
+      - What types of diseases are spread by pests in paddy fields?
+      - How can I maintain healthy paddy plants and prevent diseases?
+      - What is the relationship between weather and paddy diseases?
+      - Can I use natural methods to treat paddy diseases?
+      - How does improper irrigation contribute to paddy diseases?
+      - Are there any preventive measures against bacterial leaf streak in paddy?
+      - What are the most dangerous diseases for paddy farmers?
+
+  - intent: ask_soil_requirements
+    examples: |
+      - What type of soil is suitable for paddy?
+      - Tell me about soil requirements for paddy.
+      - What soil does paddy need?
+      - What kind of soil is best for paddy farming?
+      - Can you tell me the ideal soil for growing paddy?
+      - What soil properties are important for paddy crops?
+      - What is the best soil for rice farming?
+      - What type of soil is needed for healthy paddy growth?
+      - How should the soil be for paddy cultivation?
+      - What is the soil pH requirement for paddy?
+      - Does paddy require sandy soil or clay soil?
+      - How do soil conditions affect paddy growth?
+      - What is the soil texture suitable for growing paddy?
+      - Does paddy need loamy soil?
+      - Can paddy be grown in alkaline soil?
+      - What kind of soil drainage is required for paddy?
+      - What soil conditions are ideal for rice?
+      - What is the best soil type for paddy yield?
+      - Is paddy grown better in wet soil?
+      - What nutrients should be in the soil for paddy?
+      - How does the soil composition affect paddy cultivation?
+      - What is the required soil depth for paddy?
+      - Can paddy grow in acidic soil?
+      - What is the effect of soil salinity on paddy crops?
+      - What soil preparation is needed for paddy cultivation?
+      - Does paddy need well-drained soil?
+      - What is the role of organic matter in paddy soil?
+      - Can paddy grow in soil with high clay content?
+      - What is the recommended soil texture for paddy?
+      - What kind of soil supports the best paddy yield?
+      - What soil structure is ideal for rice farming?
+      - How do soil conditions influence paddy diseases?
+      - What kind of soil is required for paddy in flood-prone areas?
+      - How does water retention in soil affect paddy growth?
+      - Is fertile soil important for paddy farming?
+      - Can paddy grow in dry soil?
+      - What are the soil requirements for organic paddy farming?
+      - What type of soil helps reduce paddy plant stress?
+      - How should soil be managed for high-yield paddy crops?
+      - What effect does soil compaction have on paddy?
+      - How can I improve soil fertility for paddy farming?
+      - What is the soil texture that promotes optimal rice growth?
+      - How does waterlogged soil affect paddy cultivation?
+      - Does paddy require specific soil amendments?
+      - How does soil erosion affect paddy growth?
+      - What role does soil temperature play in paddy farming?
+      - What is the impact of soil type on paddy production?
+      - How can I test soil quality for paddy farming?
+      - How do I improve soil drainage for paddy fields?
+      - Can paddy be grown in rocky soil?
+      - What is the relationship between soil fertility and paddy yield?
+      - How does soil health impact the quality of paddy?
+      - What are the signs of soil deficiency in paddy farming?
+
+  - intent: ask_disease_overview
+    examples: |
+      - Tell me about [blast](disease).
+      - What is the overview of [bacterial blight](disease)?
+      - Give me details about [sheath blight](disease).
+      - Overview of [brown planthopper](disease) in paddy.
+      - Explain [false smut](disease) disease in paddy.
+      - Can you tell me about [leaf blast](disease)?
+      - What are the symptoms of [bacterial leaf blight](disease)?
+      - Describe the effects of [stem rot](disease).
+      - How does [rice tungro](disease) affect paddy?
+      - What causes [downy mildew](disease) in rice?
+      - Tell me about [white tip](disease) in paddy.
+      - What is the [rice yellow mottle virus](disease)?
+      - Explain [blast fungus](disease) in paddy crops.
+      - How to identify [sheath blight](disease)?
+      - What is [leaf spot](disease) in paddy plants?
+      - Give me an overview of [root knot nematodes](disease).
+      - What does [paddy rust](disease) do to crops?
+      - Symptoms of [rice blast](disease) disease?
+      - How does [rice stem borer](disease) affect paddy?
+      - What is the treatment for [bacterial blight](disease)?
+      - Overview of [white backed planthopper](disease).
+      - What is [rice kernel smut](disease)?
+      - How to control [brown plant hopper](disease)?
+      - What is [rice blast](disease) and its symptoms?
+      - Can you explain [northern corn leaf blight](disease)?
+      - What causes [red rot](disease) in rice?
+      - What is the effect of [bacterial wilt](disease)?
+      - Tell me about [fungal infection](disease) in paddy.
+      - What is the impact of [rice leaf folder](disease)?
+      - Describe the symptoms of [rice sheath rot](disease).
+      - How to prevent [brown spot](disease) in paddy?
+      - What causes [rice stem rot](disease)?
+      - How to manage [rice false smut](disease)?
+      - Explain [planthopper](disease) infestation in paddy.
+      - What is the effect of [rice bacterial blight](disease)?
+      - Tell me about the [paddy blast](disease) problem.
+      - Symptoms and treatment of [paddy leaf curl](disease).
+      - How do you treat [rice sheath blight](disease)?
+      - Describe [rice yellowing](disease).
+      - What is [rice bacterial leaf blight](disease)?
+      - What is the impact of [paddy yellowing](disease)?
+      - Overview of [rice brown spot](disease).
+      - Symptoms of [paddy wilting](disease).
+      - What is the control measure for [bacterial blight](disease)?
+      - How does [rice grain discoloration](disease) happen?
+      - What is [paddy rust](disease)?
+      - How do you deal with [rice brown planthopper](disease)?
+      - What does [rice blight](disease) cause to the crop?
+      - Describe the impact of [paddy leaf disease](disease).
+      - Symptoms and remedies for [sheath blight](disease).
+      - What causes [white smut](disease) in rice?
+      - Can [rice yellow mottle virus](disease) be cured?
+      - Tell me about [paddy root rot](disease).
+      - What are the symptoms of [rice false smut](disease)?
+
+  - intent: ask_disease_precautions
+    examples: |
+      - What precautions should I take for [blast](disease)?
+      - How to prevent [bacterial blight](disease)?
+      - Precautions for [sheath blight](disease) in paddy.
+      - How to avoid [brown planthopper](disease) infestation?
+      - What are the precautions for [false smut](disease)?
+      - How to manage [leaf blast](disease)?
+      - Tell me the precautions for [bacterial leaf blight](disease).
+      - What steps can prevent [stem rot](disease)?
+      - How to stop [rice tungro](disease) infection?
+      - How to prevent [downy mildew](disease) in paddy?
+      - What are the best precautions for [white tip](disease)?
+      - How to manage [rice yellow mottle virus](disease)?
+      - What precautions to take against [blast fungus](disease)?
+      - How to prevent [sheath blight](disease) in rice?
+      - What are the precautionary measures for [leaf spot](disease)?
+      - How to stop [root knot nematodes](disease) in paddy?
+      - What are the control measures for [paddy rust](disease)?
+      - How to manage [rice blast](disease) disease?
+      - What steps can be taken to avoid [rice stem borer](disease)?
+      - What precautions should be taken for [rice kernel smut](disease)?
+      - How to control [brown plant hopper](disease) infestation?
+      - What precautions should I take to avoid [northern corn leaf blight](disease)?
+      - How to manage [red rot](disease) in paddy?
+      - What are the precautions to prevent [bacterial wilt](disease)?
+      - How to handle [fungal infection](disease) in rice?
+      - What can be done to avoid [rice leaf folder](disease)?
+      - What precautions to take against [rice sheath rot](disease)?
+      - How to control [brown spot](disease) in paddy?
+      - How to prevent [rice stem rot](disease)?
+      - What are the precautions for [rice false smut](disease)?
+      - How to avoid [planthopper](disease) damage to paddy?
+      - What are the preventive measures for [rice bacterial blight](disease)?
+      - How to prevent [paddy blast](disease)?
+      - How to avoid [paddy leaf curl](disease)?
+      - What are the steps to prevent [rice sheath blight](disease)?
+      - What precautions can help with [rice yellowing](disease)?
+      - How to prevent [rice bacterial leaf blight](disease)?
+      - What precautions should be taken for [paddy yellowing](disease)?
+      - How to manage [rice brown spot](disease)?
+      - How to stop [paddy wilting](disease)?
+      - What precautions should be taken against [bacterial blight](disease)?
+      - How to avoid [rice grain discoloration](disease)?
+      - What steps can prevent [paddy rust](disease)?
+      - How to prevent [rice brown planthopper](disease)?
+      - How to manage [rice blight](disease)?
+      - What precautions can prevent [paddy leaf disease](disease)?
+      - How to prevent [sheath blight](disease) from spreading?
+      - What are the precautions for [white smut](disease)?
+      - How to manage [rice yellow mottle virus](disease)?
+      - How to control [paddy root rot](disease)?
+      - How to prevent [rice false smut](disease)?
+      - What steps can stop [paddy disease](disease) outbreaks?
+
+  - intent: ask_disease_remedies
+    examples: |
+      - Remedies for [blast](disease) in paddy.
+      - How to treat [bacterial blight](disease)?
+      - What should I do if my crop has [sheath blight](disease)?
+      - Solutions for [brown planthopper](disease) attack.
+      - How to control [false smut](disease) in paddy?
+      - Remedies for [leaf blast](disease) in rice.
+      - Treatment options for [bacterial leaf blight](disease).
+      - How to manage [stem rot](disease) in rice?
+      - What remedies work for [rice tungro](disease) infection?
+      - Solutions for [downy mildew](disease) in paddy.
+      - What are the remedies for [white tip](disease)?
+      - How to treat [rice yellow mottle virus](disease)?
+      - What should I do to cure [blast fungus](disease)?
+      - How to control [sheath blight](disease) in rice?
+      - Treatment for [leaf spot](disease) in paddy.
+      - How to handle [root knot nematodes](disease) in paddy?
+      - Remedies for [paddy rust](disease) infestation.
+      - Treatment for [rice blast](disease) disease.
+      - How to manage [rice stem borer](disease) attack?
+      - Remedies for [rice kernel smut](disease).
+      - Solutions for [brown plant hopper](disease) infestation.
+      - How to treat [northern corn leaf blight](disease) in paddy?
+      - Remedies for [red rot](disease) in rice.
+      - Treatment options for [bacterial wilt](disease) in paddy.
+      - How to treat [fungal infection](disease) in rice crops?
+      - Solutions for [rice leaf folder](disease) infestation.
+      - Remedies for [rice sheath rot](disease).
+      - How to treat [brown spot](disease) in paddy?
+      - Solutions for [rice stem rot](disease).
+      - Remedies for [rice false smut](disease).
+      - How to manage [planthopper](disease) damage in paddy?
+      - Treatment for [rice bacterial blight](disease).
+      - Remedies for [paddy blast](disease).
+      - Solutions for [paddy leaf curl](disease).
+      - How to treat [rice sheath blight](disease)?
+      - Remedies for [rice yellowing](disease).
+      - How to treat [rice bacterial leaf blight](disease)?
+      - Remedies for [paddy yellowing](disease).
+      - Treatment for [rice brown spot](disease).
+      - Solutions for [paddy wilting](disease).
+      - Remedies for [bacterial blight](disease) in paddy.
+      - How to treat [rice grain discoloration](disease)?
+      - Solutions for [paddy rust](disease).
+      - Treatment for [rice brown planthopper](disease).
+      - Remedies for [rice blight](disease).
+      - How to manage [paddy leaf disease](disease)?
+      - Remedies to stop [sheath blight](disease) from spreading.
+      - Solutions for [white smut](disease) in paddy.
+      - Remedies for [rice yellow mottle virus](disease).
+      - How to treat [paddy root rot](disease)?
+      - Solutions for [rice false smut](disease).
+      - Remedies to prevent [paddy disease](disease) outbreaks.
+
+  - intent: ask_fertilizer_types
+    examples: |
+      - What types of fertilizers should I use for paddy?
+      - Can you tell me about the different types of fertilizers for paddy?
+      - What fertilizers are best for paddy crops?
+      - How many types of fertilizers are there for paddy?
+      - Which fertilizers are recommended for paddy crops?
+
+  - intent: ask_fertilizer_application_time
+    examples: |
+      - When should I apply fertilizer to paddy crops?
+      - What is the best time to apply fertilizer to paddy?
+      - Can you tell me when to apply fertilizer for paddy?
+      - At which stage should I apply fertilizer to my paddy crop?
+      - What is the ideal time to apply fertilizers during paddy cultivation?
+
+  - intent: ask_fertilizer_quantity
+    examples: |
+      - How much fertilizer should I use for paddy?
+      - What is the recommended amount of fertilizer for paddy crops?
+      - How many kilograms of fertilizer should I use per acre for paddy?
+      - Can you tell me how much fertilizer I need for paddy?
+      - How do I calculate the amount of fertilizer for my paddy field?
+
+  - intent: ask_fertilizer_organic_vs_inorganic
+    examples: |
+      - Should I use organic or inorganic fertilizer for paddy?
+      - What is better for paddy, organic or inorganic fertilizer?
+      - Which fertilizer is better for paddy crops, organic or inorganic?
+      - Can I use organic fertilizers for paddy cultivation?
+      - What is the difference between organic and inorganic fertilizers for paddy?
+
+  - intent: ask_fertilizer_nutrient_content
+    examples: |
+      - What nutrients should fertilizers contain for paddy crops?
+      - Which nutrients are important in fertilizers for paddy?
+      - Can you tell me the nutrient content needed in fertilizers for paddy?
+      - What are the key nutrients in fertilizers for paddy cultivation?
+      - What nutrients are required for healthy growth of paddy through fertilizers?
+
+  - intent: ask_fertilizer_usage_guidelines
+    examples: |
+      - How do I apply fertilizers to paddy crops?
+      - Can you give me some guidelines on using fertilizer for paddy?
+      - What are the best practices for applying fertilizers to paddy?
+      - How should I apply fertilizers during the paddy growth stages?
+      - Can you provide tips for using fertilizers in paddy fields?
+
+  - intent: ask_fertilizer_effect_on_yield
+    examples: |
+      - How does fertilizer affect paddy yield?
+      - Can fertilizer improve the yield of paddy?
+      - What is the effect of fertilizer on paddy crop yield?
+      - How much does fertilizer increase paddy yield?
+      - Will using fertilizer increase the paddy yield?
+
+  - intent: ask_fertilizer_suggestions
+    examples: |
+      - What fertilizer should I use for paddy to increase yield?
+      - Can you suggest a good fertilizer for paddy crops?
+      - What is the best fertilizer for paddy in this season?
+      - Which fertilizer will help me get a better yield for paddy?
+      - Can you recommend a fertilizer for healthy paddy growth?
+
+  - intent: ask_fertilizer_preference_for_soil
+    examples: |
+      - What fertilizer should I use for acidic soil for paddy?
+      - Which fertilizers are best for alkaline soil in paddy cultivation?
+      - Can you suggest fertilizers for paddy on clay soil?
+      - What kind of fertilizer is best for paddy on sandy soil?
+      - How do I choose fertilizer for different soil types for paddy?
+
+  - intent: ask_fertilizer_side_effects
+    examples: |
+      - Are there any side effects of using too much fertilizer on paddy?
+      - What are the side effects of fertilizers on paddy crops?
+      - Can excessive fertilizer damage paddy crops?
+      - What happens if I over-apply fertilizer to my paddy crop?
+      - Are there any risks of using too much fertilizer in paddy fields?
+
+  - synonym: blast
+    examples: |
+      - Rice blast
+      - Pyricularia blight
+      - Neck blast
+      - Blast disease
+
+  - synonym: bacterial blight
+    examples: |
+      - Xanthomonas blight
+      - Bacterial spot
+
+  - synonym: sheath blight
+    examples: |
+      - Sheath blight disease
+      - Rice sheath blight
+      - Rhizoctonia sheath blight
+      - Blight of paddy sheath
+
+  - synonym: brown planthopper
+    examples: |
+      - Brown plant hopper
+      - BPH
+      - Rice planthopper
+      - Nilaparvata lugens
+      - Planthopper pest
+
+  - synonym: false smut
+    examples: |
+      - False smut disease
+      - Ustilaginoidea virens
+      - Smut disease of rice
+      - Rice false smut
+
+  - synonym: leaf blast
+    examples: |
+      - Leaf blast disease
+      - Pyricularia oryzae
+      - Rice leaf blast
+
+  - synonym: bacterial leaf blight
+    examples: |
+      - Leaf blight
+      - Xanthomonas oryzae
+      - Bacterial leaf disease
+      - Rice bacterial blight
+
+  - synonym: stem rot
+    examples: |
+      - Rice stem rot
+      - Rot disease in paddy
+      - Rhizoctonia stem rot
+      - Stem blight in rice
+
+  - synonym: rice tungro
+    examples: |
+      - Tungro virus
+      - Rice tungro disease
+      - Rice tungro virus disease
+
+  - synonym: downy mildew
+    examples: |
+      - Downy mildew disease
+      - Peronosclerospora
+      - Mildew on rice
+      - Rice downy mildew
+
+  - synonym: white tip
+    examples: |
+      - White tip disease
+      - Rice white tip
+      - Rice white tip virus
+      - White tip disorder
+
+  - synonym: rice yellow mottle virus
+    examples: |
+      - Rice yellow mottle virus disease
+      - RYMV
+      - Yellow mottle virus
+      - Yellow mottle disease
+
+  - synonym: blast fungus
+    examples: |
+      - Rice blast fungus
+      - Pyricularia fungus
+      - Blast fungus in paddy
+
+  - synonym: rice leaf folder
+    examples: |
+      - Leaf folder in rice
+      - Rice leaf folder pest
+      - Cnaphalocrocis medinalis
+      - Leaf folder pest
+
+  - synonym: root knot nematodes
+    examples: |
+      - Nematodes in rice roots
+      - Root-knot nematode
+      - Meloidogyne nematode
+
+  - synonym: paddy rust
+    examples: |
+      - Rice rust
+      - Rust disease in paddy
+      - Uromyces paddy rust
+
+  - synonym: rice stem borer
+    examples: |
+      - Stem borer in rice
+      - Rice stem borer pest
+      - Scirpophaga excerptalis
+
+  - synonym: rice kernel smut
+    examples: |
+      - Rice smut
+      - Kernel smut disease
+      - Ustilaginoidea virens (kernel smut)
+
+  - synonym: northern corn leaf blight
+    examples: |
+      - Corn leaf blight
+      - Northern corn leaf disease
+      - Blight of corn leaves
+
+  - synonym: red rot
+    examples: |
+      - Red rot disease in paddy
+      - Red rot of rice
+      - Rice red rot fungus
+
+  - synonym: bacterial wilt
+    examples: |
+      - Bacterial wilt disease
+      - Wilt disease in rice
+      - Bacterial wilt in paddy
+
+  - synonym: fungal infection
+    examples: |
+      - Fungal diseases in rice
+      - Fungal infection in paddy
+      - Rice fungal disorders
+
+  - synonym: rice sheath rot
+    examples: |
+      - Sheath rot in rice
+      - Rice sheath disease
+      - Rot disease of paddy sheath
+
+  - synonym: brown spot
+    examples: |
+      - Brown spot disease in rice
+      - Rice brown spot
+      - Bipolaris oryzae (brown spot)
+
+  - synonym: rice brown planthopper
+    examples: |
+      - Brown planthopper in rice
+      - BPH in rice
+      - Nilaparvata lugens (brown planthopper)
+
+  - synonym: paddy wilting
+    examples: |
+      - Wilting in paddy
+      - Rice wilting disease
+      - Paddy wilt
+
+  - synonym: paddy leaf curl
+    examples: |
+      - Leaf curl in paddy
+      - Rice leaf curl
+      - Curling of paddy leaves
+
+  - synonym: white smut
+    examples: |
+      - White smut in paddy
+      - Smut disease in rice
+      - Ustilaginoidea virens (white smut)
+
+  - synonym: rice blight
+    examples: |
+      - Blight in rice
+      - Rice blight disease
+      - Blight fungus in rice

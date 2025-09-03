@@ -1,0 +1,504 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - bot_challenge
+  - ask_overview
+  - ask_precautions
+  - ask_remedies
+  - ask_growth_stage
+  - ask_yield
+  - ask_diseases
+  - ask_soil_requirements
+  - ask_disease_overview
+  - ask_disease_precautions
+  - ask_disease_remedies
+  - ask_fertilizer_types
+  - ask_fertilizer_application_time
+  - ask_fertilizer_quantity
+  - ask_fertilizer_organic_vs_inorganic
+  - ask_fertilizer_nutrient_content
+  - ask_fertilizer_usage_guidelines
+  - ask_fertilizer_effect_on_yield
+  - ask_fertilizer_suggestions
+  - ask_fertilizer_preference_for_soil
+  - ask_fertilizer_side_effects
+
+entities:
+  - disease # Specific disease, e.g., blast, bacterial blight, sheath blight
+
+slots:
+  disease:
+    type: text
+    mappings:
+      - type: from_entity
+        entity: disease
+
+responses:
+  utter_greet:
+    - text: "Hey! How are you? I can provide you with details on various paddy diseases like blast, blight, and sheath blight."
+    - text: "Hi there! How’s it going? Let me know if you want information on diseases affecting paddy crops."
+    - text: "Hello! How are you today? I can help you learn about common paddy diseases and their prevention."
+    - text: "Hey! What’s up? I’m here to assist you with details on paddy diseases like bacterial blight and rice blast."
+    - text: "Hi! How’s everything going? I have info on paddy diseases like brown planthopper and rice tungro."
+    - text: "Good to see you! How’s it going? I can provide information on various diseases that affect paddy."
+    - text: "Hello, how’s your day going? I can share information on diseases like leaf blast and sheath rot in paddy."
+    - text: "Hey! How’s everything? I’m here to assist with any questions about paddy diseases like stem rot or false smut."
+    - text: "Hi! How are you today? If you're curious about paddy diseases like bacterial leaf blight, I’ve got you covered."
+    - text: "Greetings! How’s everything? I can tell you about paddy diseases such as rice yellow mottle virus and downy mildew."
+    - text: "Hey, how are you doing today? I have information on various paddy diseases, including leaf folder and paddy rust."
+    - text: "Hi! What’s new with you? If you're looking for info on paddy diseases like rice stem borer, I can help."
+    - text: "Hello! How’s your day treating you? Let me know if you want to know about diseases like white tip and paddy wilt."
+    - text: "Hey! How are you doing? I can give you details on rice diseases such as brown spot and rice sheath blight."
+    - text: "Hi there! How’s everything with you? I can share information on diseases like rice kernel smut and bacterial wilt."
+    - text: "Greetings! How’s your day been? If you need info on paddy diseases like red rot or rice leaf curl, just ask."
+    - text: "Hello! How’s it going? I have details about diseases affecting paddy, such as stem rot and fungal infections."
+    - text: "Hey! How’s life? I can provide you with insights into diseases like rice blast and fungal infections in paddy."
+    - text: "Hi! What’s up with you today? Let me know if you need advice on paddy diseases like brown planthopper or rice blight."
+    - text: "Hello! How’s everything going? I’m here to help you with information about paddy diseases like rice blight and sheath rot."
+
+  utter_goodbye:
+    - text: "Bye! Have a great day!"
+    - text: "Goodbye! Feel free to reach out if you need anything else."
+    - text: "Bye for now! Take care."
+    - text: "See you later!"
+    - text: "Goodbye! Stay safe!"
+    - text: "It was nice talking to you. Goodbye!"
+    - text: "Take care! See you next time."
+    - text: "Bye! Let me know if you need help in the future."
+    - text: "Goodbye, and have a wonderful day!"
+    - text: "Farewell! I'm here if you need me."
+
+  utter_iamabot:
+    - text: "I am a bot, powered by Rasa, here to assist you with your questions."
+    - text: "I am an AI bot built with Rasa to help you with information about paddy and more."
+    - text: "I am a bot created with Rasa, here to assist you with any inquiries."
+    - text: "I'm an AI bot, designed to provide helpful information powered by Rasa."
+    - text: "I am a Rasa-powered bot, here to assist you with your farming needs."
+    - text: "I'm an AI chatbot built with Rasa to answer all your paddy-related queries."
+    - text: "I’m a bot designed to provide detailed information about paddy, powered by Rasa."
+    - text: "I am a virtual assistant powered by Rasa, ready to help with your paddy-related questions."
+    - text: "I’m an AI-powered bot by Rasa, assisting you with paddy knowledge and more."
+    - text: "I'm a Rasa-powered bot, here to assist you with any paddy-related concerns."
+
+  utter_fallback:
+    - text: "I'm sorry, I didn't quite understand. Could you rephrase your question?"
+    - text: "Sorry, I didn't quite understand that. Can you please rephrase?"
+    - text: "I'm not sure about that. Could you clarify?"
+    - text: "I didn't catch that. Could you try asking in a different way?"
+    - text: "Hmm, I need more details to help you with that. Can you please elaborate?"
+    - text: "Sorry, I couldn't understand your request. Could you ask again?"
+    - text: "Could you please rephrase your question?"
+    - text: "I'm not sure I understand. Can you clarify your question?"
+    - text: "I didn’t get that. Would you mind rephrasing it?"
+    - text: "I didn't quite catch that. Could you say it differently?"
+    - text: "I'm not sure what you mean. Can you explain in another way?"
+
+  utter_ask_growth_stage:
+    - text: "Paddy goes through several growth stages: germination, tillering, booting, heading, and ripening."
+    - text: "The growth stages of paddy include germination, tillering, booting, heading, and ripening."
+    - text: "Paddy plants undergo several key stages: from germination to tillering, booting, heading, and finally ripening."
+    - text: "There are five main stages in paddy growth: germination, tillering, booting, heading, and ripening."
+    - text: "Paddy growth progresses through these stages: germination, tillering, booting, heading, and ripening."
+    - text: "The life cycle of paddy consists of germination, tillering, booting, heading, and ripening stages."
+    - text: "The stages of paddy growth are germination, tillering, booting, heading, and ripening."
+    - text: "Paddy progresses through five growth stages: germination, tillering, booting, heading, and ripening."
+    - text: "From germination to ripening, paddy passes through the stages of tillering, booting, and heading."
+    - text: "Germination, tillering, booting, heading, and ripening—these are the key growth stages of paddy."
+    - text: "The first stage of paddy growth is germination, followed by tillering, booting, heading, and ripening."
+    - text: "Paddy experiences a series of stages: germination, tillering, booting, heading, and ripening."
+    - text: "The paddy plant grows through stages: starting with germination, then tillering, followed by booting, heading, and ripening."
+    - text: "During its life cycle, paddy goes from germination to ripening, passing through tillering, booting, and heading."
+    - text: "The main growth stages of paddy are germination, tillering, booting, heading, and ripening."
+    - text: "Paddy starts with germination, then progresses through tillering, booting, heading, and finally ripening."
+    - text: "In paddy farming, growth starts with germination, then continues through tillering, booting, heading, and ripening."
+    - text: "Paddy plants develop through a series of stages: germination, tillering, booting, heading, and ripening."
+    - text: "The stages of paddy plant development include germination, tillering, booting, heading, and ripening."
+    - text: "The process of paddy growth includes these stages: germination, tillering, booting, heading, and ripening."
+
+  utter_ask_yield:
+    - text: "The yield of paddy depends on the variety and cultivation practices, typically ranging from 3-7 tons per hectare."
+    - text: "Paddy yield varies based on the variety and farming methods, usually ranging from 3 to 7 tons per hectare."
+    - text: "Depending on the paddy variety and cultivation practices, the yield can range between 3 to 7 tons per hectare."
+    - text: "Paddy yields typically range from 3-7 tons per hectare, depending on the crop variety and farming techniques."
+    - text: "The yield from paddy cultivation is influenced by the variety and cultivation practices, typically between 3 to 7 tons per hectare."
+    - text: "Paddy yields generally fall between 3 and 7 tons per hectare, depending on farming techniques and variety."
+    - text: "The average yield of paddy can vary, ranging from 3 tons to 7 tons per hectare, depending on the variety and farming practices."
+    - text: "Paddy crops usually yield between 3 to 7 tons per hectare, influenced by cultivation practices and crop variety."
+    - text: "The typical yield of paddy ranges from 3 to 7 tons per hectare, depending on various factors like the variety and cultivation method."
+    - text: "Yields for paddy farming generally range from 3 to 7 tons per hectare, influenced by factors like variety and cultivation methods."
+    - text: "The yield of paddy can vary, but generally it ranges from 3 to 7 tons per hectare, based on variety and farming practices."
+    - text: "On average, paddy yields range from 3 to 7 tons per hectare, depending on factors like crop variety and cultivation techniques."
+    - text: "The yield of paddy depends largely on the variety used and farming methods, with typical yields ranging from 3-7 tons per hectare."
+    - text: "Paddy typically yields between 3 and 7 tons per hectare, but this can vary depending on the variety and the cultivation practices."
+    - text: "The amount of paddy you can harvest usually ranges from 3 to 7 tons per hectare, depending on the variety and cultivation method."
+    - text: "For paddy farming, yields typically range from 3 to 7 tons per hectare, influenced by the variety of paddy and farming practices."
+    - text: "Paddy yield varies, but it typically ranges from 3-7 tons per hectare based on the variety and cultivation practices."
+    - text: "The yield of paddy can range from 3 to 7 tons per hectare, depending on the paddy variety and farming practices."
+    - text: "On average, paddy yields range from 3 to 7 tons per hectare, which can vary depending on the variety and cultivation methods."
+    - text: "Paddy yields generally fall between 3 and 7 tons per hectare, depending on cultivation techniques and the paddy variety."
+
+  utter_ask_diseases:
+    - text: "Paddy can be affected by diseases like blast, bacterial blight, and sheath blight. Proper management is essential."
+    - text: "Paddy crops can suffer from diseases such as blast, bacterial blight, and sheath blight. Effective management is key."
+    - text: "Common diseases that affect paddy include blast, bacterial blight, and sheath blight. Good management practices can help prevent them."
+    - text: "Paddy is susceptible to diseases like blast, bacterial blight, and sheath blight. It's important to manage these diseases properly."
+    - text: "Diseases such as blast, bacterial blight, and sheath blight can impact paddy. Timely management is essential for healthy crops."
+    - text: "Paddy plants can be prone to diseases like blast, bacterial blight, and sheath blight. Disease management is crucial for successful farming."
+    - text: "Paddy is affected by several diseases, including blast, bacterial blight, and sheath blight, which require proper care and management."
+    - text: "Key diseases of paddy include blast, bacterial blight, and sheath blight. Disease control and prevention are necessary for healthy crops."
+    - text: "Blast, bacterial blight, and sheath blight are some of the diseases that can affect paddy. Proper care is needed to minimize their impact."
+    - text: "Paddy is vulnerable to diseases like blast, bacterial blight, and sheath blight. Prevention and treatment are essential for maintaining a healthy crop."
+    - text: "Paddy can be infected by diseases like blast, bacterial blight, and sheath blight. Disease management practices are vital to protect the crop."
+    - text: "Diseases such as blast, bacterial blight, and sheath blight can harm paddy. Effective management practices are required to mitigate these issues."
+    - text: "Blast, bacterial blight, and sheath blight are among the most common diseases that affect paddy. Proper disease control is necessary."
+    - text: "Paddy is prone to diseases like blast, bacterial blight, and sheath blight. These diseases can be managed with proper techniques."
+    - text: "Paddy farming can face challenges from diseases like blast, bacterial blight, and sheath blight, which need to be managed effectively."
+    - text: "Paddy crops can be attacked by diseases such as blast, bacterial blight, and sheath blight. Effective management practices are essential for disease control."
+    - text: "The main diseases that affect paddy include blast, bacterial blight, and sheath blight. Preventive measures and management are essential for successful farming."
+    - text: "Paddy can suffer from diseases like blast, bacterial blight, and sheath blight. Proper management is crucial to avoid crop loss."
+    - text: "Diseases such as blast, bacterial blight, and sheath blight affect paddy. Effective management and monitoring can prevent significant damage."
+    - text: "Paddy is vulnerable to diseases like blast, bacterial blight, and sheath blight, which can be controlled with timely management and prevention."
+
+  utter_ask_soil_requirements:
+    - text: "Paddy thrives in well-drained, fertile loamy soil with good water retention capacity."
+    - text: "For optimal growth, paddy requires fertile, loamy soil that is well-drained and has good water retention."
+    - text: "Paddy grows best in well-drained loamy soil that is rich in fertility and has excellent water retention capabilities."
+    - text: "The ideal soil for paddy is fertile loam with good drainage and the ability to retain moisture effectively."
+    - text: "Paddy needs well-drained, fertile soil, preferably loamy, that can hold water efficiently for optimal growth."
+    - text: "For paddy farming, loamy soil with good fertility and water retention is ideal for healthy crop growth."
+    - text: "The best soil for paddy is fertile loamy soil that drains well and holds water effectively."
+    - text: "Paddy requires well-drained, fertile loamy soil that has the capacity to retain water."
+    - text: "Loamy soil that is well-drained, fertile, and capable of holding water is ideal for paddy cultivation."
+    - text: "Paddy grows best in fertile loamy soil that has good drainage and retains water efficiently."
+    - text: "For paddy farming, fertile loamy soil with excellent water retention and drainage properties is necessary."
+    - text: "Paddy plants need well-drained, fertile loamy soil that retains water well for healthy growth."
+    - text: "Loamy soil that retains water effectively and drains well is essential for successful paddy cultivation."
+    - text: "Paddy thrives in soil that is loamy, fertile, well-drained, and has good water retention capacity."
+    - text: "To grow paddy successfully, the soil must be fertile loam with good drainage and moisture retention."
+    - text: "The ideal soil for paddy farming is loamy, fertile, well-drained, and has good water retention."
+    - text: "Paddy thrives in well-drained loamy soil that is rich in nutrients and can hold water efficiently."
+    - text: "Fertile loamy soil with good drainage and the ability to retain water is best for paddy cultivation."
+    - text: "For optimal paddy growth, soil that is fertile, loamy, and well-drained with good water retention is necessary."
+    - text: "The perfect soil for paddy is loamy, fertile, well-drained, and has excellent water retention."
+    - text: "Paddy requires loamy soil that is fertile, well-drained, and retains water well for successful cultivation."
+
+  utter_ask_overview:
+    - text: |
+        Paddy, or rice, is a staple food crop grown in water-intensive environments. 
+        It requires fertile soil, consistent irrigation, and warm climates for optimal growth.
+    - text: |
+        Paddy, also known as rice, is a major food crop that thrives in flooded fields. 
+        It needs fertile soil, steady water supply, and warm temperatures to grow well.
+    - text: |
+        Rice, or paddy, is grown in water-rich environments and is a key food crop globally. 
+        Fertile soil, consistent irrigation, and warm climates are crucial for its growth.
+    - text: |
+        Paddy, or rice, is an essential food crop that grows best in flooded fields. 
+        It requires fertile soil, consistent irrigation, and a warm climate for healthy growth.
+    - text: |
+        Paddy, also called rice, grows in waterlogged fields and requires fertile, well-drained soil, along with a consistent water supply and warm weather.
+    - text: |
+        Rice, or paddy, is a globally important crop grown in wet conditions. 
+        It needs fertile soil, abundant water, and a warm climate to reach its full potential.
+    - text: |
+        Paddy, or rice, is a water-intensive crop that requires fertile soil, regular irrigation, and warm climates for optimal growth.
+    - text: |
+        Rice, or paddy, thrives in flooded environments, needing fertile soil, ample water, and warm temperatures for successful growth.
+    - text: |
+        Paddy, a key staple crop, grows best in waterlogged conditions with fertile soil and a consistent water supply, along with warm climates.
+    - text: |
+        Rice, or paddy, is a food staple that grows in flooded fields, requiring fertile soil, regular water, and a warm climate to thrive.
+    - text: |
+        Paddy, also called rice, flourishes in flooded fields where it needs fertile soil, a steady water supply, and a warm climate to grow.
+    - text: |
+        Rice, or paddy, is grown in water-intensive fields and requires fertile soil, consistent irrigation, and warm weather for optimal development.
+    - text: |
+        Paddy, also known as rice, requires wet conditions to grow, including fertile soil, good water supply, and a warm climate.
+    - text: |
+        Rice, or paddy, is a key food crop that thrives in waterlogged conditions. Fertile soil, consistent irrigation, and warm temperatures are key to its growth.
+    - text: |
+        Paddy, or rice, is a major crop requiring fertile soil, ample irrigation, and warm climates to grow in water-saturated fields.
+    - text: |
+        Rice, also called paddy, needs fertile soil, constant water supply, and warm weather to grow successfully in wet fields.
+    - text: |
+        Paddy, a vital crop for food security, grows in flooded fields with fertile soil, steady irrigation, and a warm climate for optimal growth.
+    - text: |
+        Rice, or paddy, grows best in flooded, fertile soil with abundant water and warm weather to ensure a good harvest.
+    - text: |
+        Paddy, or rice, grows in fields that are consistently flooded, requiring fertile soil and warm climates for healthy growth.
+    - text: |
+        Rice, also known as paddy, is grown in waterlogged environments and thrives with fertile soil, consistent irrigation, and warm temperatures.
+
+  utter_ask_precautions:
+    - text: |
+        Key precautions for paddy farming include:
+        - Ensure proper water management and irrigation.
+        - Use certified disease-resistant seeds.
+        - Monitor for pests like brown planthoppers and diseases such as blight.
+        - Apply fertilizers judiciously to avoid overuse.
+    - text: |
+        To protect paddy crops, consider the following precautions:
+        - Manage water levels carefully and maintain irrigation.
+        - Choose disease-resistant seeds for better protection.
+        - Regularly check for pests like planthoppers and diseases such as blast.
+        - Use fertilizers in moderation to prevent overuse.
+    - text: |
+        Important precautions for paddy farming include:
+        - Properly manage water and ensure adequate irrigation.
+        - Use disease-resistant seeds to minimize crop losses.
+        - Monitor for pests such as brown planthoppers and diseases like bacterial blight.
+        - Apply fertilizers responsibly to avoid excessive use.
+    - text: |
+        Essential precautions for paddy farming:
+        - Ensure consistent water management and irrigation.
+        - Use disease-resistant seeds to safeguard against common diseases.
+        - Watch out for pests like brown planthoppers and diseases like sheath blight.
+        - Apply fertilizers appropriately to avoid over-fertilization.
+    - text: |
+        Key precautions for successful paddy farming:
+        - Maintain proper water levels and efficient irrigation.
+        - Use disease-resistant seeds for better crop protection.
+        - Keep an eye on pests like planthoppers and diseases such as rice blast.
+        - Apply fertilizers in moderation to maintain soil health.
+
+  utter_ask_remedies:
+    - text: |
+        Remedies for common paddy issues:
+        - For pests like planthoppers, use neem-based insecticides or approved chemical treatments.
+        - For diseases like blast or bacterial blight, apply fungicides or copper-based solutions.
+        - Ensure proper drainage to avoid waterlogging.
+        - Use crop rotation techniques to improve soil health.
+    - text: |
+        Common remedies for paddy problems include:
+        - For pest control, use neem-based insecticides or other approved treatments for planthoppers.
+        - For diseases like blast or bacterial blight, treat with fungicides or copper solutions.
+        - Prevent waterlogging by ensuring good drainage.
+        - Practice crop rotation to enhance soil fertility and health.
+    - text: |
+        Solutions for common paddy farming issues:
+        - Control pests like planthoppers with neem-based insecticides or chemical treatments.
+        - Treat diseases like rice blast or bacterial blight with fungicides or copper-based products.
+        - Avoid waterlogging by ensuring proper drainage in the fields.
+        - Enhance soil health through crop rotation and good farming practices.
+    - text: |
+        Remedies for managing paddy diseases and pests:
+        - For pest issues like planthoppers, use neem-based or chemical insecticides.
+        - Control diseases such as blast or bacterial blight with fungicides or copper-based remedies.
+        - Ensure that the field has good drainage to prevent waterlogging.
+        - Use crop rotation techniques to improve soil quality and reduce disease risk.
+    - text: |
+        To address common paddy issues, consider these remedies:
+        - Use neem-based insecticides or other approved chemicals for pests like planthoppers.
+        - Apply fungicides or copper-based treatments to combat diseases such as blast or bacterial blight.
+        - Prevent waterlogging by maintaining proper drainage.
+        - Implement crop rotation to improve the health of the soil and reduce disease pressure.
+
+  utter_disease_overview:
+    - text: "The overview of {disease} is: {info}."
+    - text: "Here is the detailed overview of {disease}: {info}."
+    - text: "Let me provide you with the comprehensive information on {disease}: {info}"
+    - text: "The disease {disease} has the following characteristics: {info}"
+    - text: "This is a detailed summary of {disease}: {info}. It is important to understand these aspects to manage the disease effectively."
+    - text: "The disease overview of {disease} includes the following key points: {info}"
+    - text: "To understand {disease}, here’s a comprehensive overview of its impact and characteristics: {info}"
+    - text: "When it comes to {disease}, the overall picture is as follows: {info}. This is important to help mitigate its effects."
+    - text: "Let’s explore the critical details about {disease}: {info}. This should help you gain a better understanding of the disease."
+    - text: "The following is an in-depth look at {disease}: {info}. It is crucial to consider these details when managing your crop."
+    - text: "Here’s the key information on {disease} that every farmer should know: {info}"
+    - text: "The facts about {disease} include the following: {info}. These insights can be very useful for proactive management."
+    - text: "To help you understand {disease}, here’s a breakdown of its main characteristics: {info}"
+    - text: "The complete overview of {disease} includes the following details: {info}. Knowing this can help in prevention and management."
+    - text: "Here’s a more detailed explanation of {disease}: {info}. This information is essential for proper handling of the disease."
+    - text: "The full overview of {disease} involves understanding these details: {info}. It’s crucial for taking the necessary precautions."
+    - text: "The {disease} overview is important because it highlights: {info}. This knowledge will guide you in preventing its spread."
+    - text: "An in-depth description of {disease} is as follows: {info}. Understanding this can greatly help in managing its effects."
+    - text: "When discussing {disease}, it's essential to understand the following key aspects: {info}. This knowledge is key to managing the disease effectively."
+    - text: "Let me explain the full scope of {disease} and its impact: {info}. Understanding this can help you make informed decisions in your farming practices."
+    - text: "The disease {disease} presents several challenges, but understanding its characteristics can help: {info}. This is crucial for effective management."
+
+  utter_disease_precautions:
+    - text: "The precautions for {disease} are: {info}."
+    - text: "To prevent {disease}, it's important to follow these precautions: {info}"
+    - text: "Here are some key precautions to take in order to avoid {disease}: {info}"
+    - text: "To protect your crop from {disease}, consider these vital precautions: {info}"
+    - text: "In order to prevent the spread of {disease}, it is essential to follow these measures: {info}"
+    - text: "When dealing with {disease}, the most important precautions include: {info}"
+    - text: "The following precautions should be implemented to reduce the risk of {disease}: {info}"
+    - text: "For effective management of {disease}, ensure these precautionary measures are followed: {info}"
+    - text: "To safeguard your paddy from {disease}, take note of these important precautions: {info}"
+    - text: "If you're concerned about {disease}, here are the precautions you should adopt: {info}"
+    - text: "Key precautions to prevent {disease} include: {info}. Adhering to these will help in maintaining healthy crops."
+    - text: "To minimize the impact of {disease}, follow these preventive measures: {info}. This will help ensure the health of your paddy."
+    - text: "The best way to manage {disease} is by practicing these precautions: {info}. Taking these actions will significantly reduce the risk."
+    - text: "For {disease} management, ensure the following precautions: {info}. This will help in controlling the disease."
+    - text: "The recommended precautions to prevent the onset of {disease} are: {info}. These are essential for maintaining crop health."
+    - text: "You can protect your crops from {disease} by following these essential precautions: {info}"
+    - text: "To reduce the risk of {disease}, you should implement these precautions: {info}. This approach will help in effective control."
+    - text: "By following these simple yet effective precautions for {disease}, you can significantly improve crop health: {info}"
+    - text: "These precautions for {disease} will help in preventing its spread and ensuring a healthy crop: {info}"
+    - text: "Make sure to take these precautionary steps to protect your crop from {disease}: {info}. Following these will greatly reduce the chance of infection."
+
+  utter_disease_remedies:
+    - text: "The remedies for {disease} are: {info}."
+    - text: "To manage {disease}, the following remedies should be applied: {info}"
+    - text: "Here are the effective remedies for {disease}: {info}"
+    - text: "In order to treat {disease}, consider using these remedies: {info}"
+    - text: "The best approach to tackle {disease} includes these remedies: {info}"
+    - text: "To combat {disease}, you can use the following remedies: {info}"
+    - text: "For managing {disease}, the following treatments and remedies are recommended: {info}"
+    - text: "These remedies will help in controlling {disease}: {info}"
+    - text: "To effectively treat {disease}, try the following remedies: {info}"
+    - text: "Here are some recommended solutions for {disease}: {info}"
+    - text: "To prevent further damage caused by {disease}, apply these remedies: {info}"
+    - text: "If your crop is affected by {disease}, the following remedies can help: {info}"
+    - text: "The most effective remedies for {disease} include: {info}. These will help restore crop health."
+    - text: "For immediate action against {disease}, consider these remedies: {info}. They will help you regain control."
+    - text: "To treat {disease} effectively, here are some recommended remedies: {info}. They are vital for restoring the crop."
+    - text: "To recover from {disease}, these remedies are proven to be effective: {info}"
+    - text: "If you're dealing with {disease}, follow these remedies for better results: {info}"
+    - text: "Use the following remedies for {disease} to control its spread and help your crops recover: {info}"
+    - text: "The following treatments are suggested for controlling {disease}: {info}. These remedies should help mitigate the problem."
+    - text: "For controlling {disease} and minimizing its impact, the following remedies are effective: {info}"
+
+  utter_no_info:
+    - text: "Sorry, I don't have information about {disease} at the moment."
+    - text: "I don't have details on {disease} right now. Please check back later."
+    - text: "Unfortunately, I currently don't have any information on {disease}."
+    - text: "I'm sorry, but I don't have data on {disease} at the moment."
+    - text: "I don't have information on {disease} right now. Let me know if you'd like information on something else."
+    - text: "At the moment, I don't have any information about {disease}. Please try again later."
+    - text: "Apologies, I don't have any data available for {disease} at the moment."
+    - text: "I'm unable to provide information on {disease} at this time. Would you like to ask something else?"
+    - text: "Unfortunately, I have no information on {disease} right now. Please feel free to ask about another topic."
+    - text: "Sorry, but I don't have the details for {disease} at the moment. Please check back soon."
+
+  utter_fertilizer_types:
+    - text: "The common types of fertilizers for paddy crops include nitrogen-based fertilizers, phosphorous fertilizers, and potassium fertilizers. Organic fertilizers, like compost and manure, are also used for paddy cultivation."
+    - text: "Paddy cultivation requires several types of fertilizers, including those high in nitrogen, phosphorus, and potassium. Organic fertilizers such as compost are also beneficial for enriching soil."
+    - text: "The key fertilizers for paddy crops are nitrogen, phosphorus, and potassium fertilizers. Organic options, like manure and compost, can also be used to improve soil health."
+    - text: "For paddy crops, nitrogen, phosphorus, and potassium fertilizers are essential. In addition, organic fertilizers such as compost and manure help improve long-term soil fertility."
+    - text: "To ensure healthy growth, paddy crops need a mix of nitrogen, phosphorus, and potassium fertilizers. Organic fertilizers like compost are also a great addition to support soil health."
+    - text: "Fertilizers for paddy farming include nitrogen, phosphorus, and potassium-based fertilizers. You can also consider using organic fertilizers like compost and manure for soil improvement."
+    - text: "Fertilizers such as nitrogen, phosphorus, and potassium are crucial for paddy crops. Organic fertilizers like compost and manure are also helpful for sustaining soil health."
+    - text: "Key fertilizers for paddy include nitrogen-based fertilizers, phosphorous fertilizers, and potassium fertilizers. Organic amendments like compost can also be very beneficial."
+    - text: "For better paddy growth, a combination of nitrogen, phosphorus, and potassium fertilizers is necessary. Organic fertilizers like compost and manure improve soil structure as well."
+    - text: "Paddy crops thrive with nitrogen, phosphorus, and potassium fertilizers, along with organic fertilizers like compost to promote long-term soil fertility."
+
+  utter_fertilizer_application_time:
+    - text: "Fertilizer should be applied at different stages of paddy growth: during land preparation, at the tillering stage, and during flowering. Make sure to follow the specific recommendations for each stage."
+    - text: "For optimal growth, fertilizers should be applied during land preparation, the tillering stage, and at flowering. Each stage requires specific nutrient management."
+    - text: "The best times to apply fertilizers for paddy crops are during land preparation, tillering, and flowering stages. Ensure timely application for maximum effectiveness."
+    - text: "Fertilizers should be applied at three key stages: during land preparation, at tillering, and during flowering. Each stage plays a vital role in crop development."
+    - text: "During land preparation, tillering, and flowering are the main stages for fertilizer application in paddy farming. Each stage requires different nutrient needs."
+    - text: "Fertilizers are best applied before transplanting, at tillering, and during flowering. This helps to provide the right nutrients at critical stages of growth."
+    - text: "In paddy cultivation, apply fertilizers during the preparation phase, at tillering, and again during flowering to meet the nutritional needs of the plants."
+    - text: "Timing fertilizer application is crucial. Apply them during land preparation, at tillering, and during flowering for the best results."
+    - text: "To ensure proper growth, paddy crops need fertilizer at key growth stages: before transplanting, at tillering, and during flowering."
+    - text: "For the best results, apply fertilizers during land preparation, at the tillering stage, and during flowering to provide nutrients at critical times."
+
+  utter_fertilizer_quantity:
+    - text: "The amount of fertilizer required depends on soil fertility and crop needs. Generally, around 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare are recommended for paddy fields. Always test the soil for more accurate recommendations."
+    - text: "The required quantity of fertilizer varies depending on the soil's fertility. A typical recommendation is 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare."
+    - text: "Fertilizer quantity depends on the soil condition. A standard recommendation for paddy fields is 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare."
+    - text: "The exact quantity of fertilizer depends on soil health. Typically, for paddy cultivation, 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare are suggested."
+    - text: "Paddy fields usually require around 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare, but soil testing provides a more accurate fertilizer plan."
+    - text: "For healthy paddy growth, use about 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare. Adjust based on soil tests."
+    - text: "The fertilizer needs for paddy fields depend on soil fertility. Typically, 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare are recommended."
+    - text: "For optimal growth, paddy crops require approximately 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare. Soil testing is essential."
+    - text: "To achieve a good yield, apply 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare, depending on soil conditions."
+    - text: "The fertilizer application depends on soil health. A typical recommendation is 100-120 kg of nitrogen, 50-60 kg of phosphorus, and 50-60 kg of potassium per hectare."
+
+  utter_fertilizer_organic_vs_inorganic:
+    - text: "Both organic and inorganic fertilizers have their benefits. Organic fertilizers improve soil health over time, while inorganic fertilizers provide quick nutrient availability for paddy crops. A balanced approach often works best."
+    - text: "Inorganic fertilizers provide quick-release nutrients, while organic fertilizers help improve long-term soil health. A balanced approach of both can lead to optimal results."
+    - text: "Organic fertilizers, such as compost, improve soil structure and health, while inorganic fertilizers offer immediate nutrient availability for paddy crops."
+    - text: "Both types of fertilizers have a role. Organic fertilizers help build soil fertility over time, while inorganic fertilizers deliver immediate nutrients to support growth."
+    - text: "Organic fertilizers support soil health, while inorganic fertilizers provide quick nutrients. A mix of both is often the most effective solution."
+    - text: "Organic fertilizers contribute to the long-term health of the soil, while inorganic fertilizers provide the necessary nutrients for quick crop growth."
+    - text: "Organic fertilizers improve the soil's structure, while inorganic fertilizers offer a fast-acting nutrient supply. The best practice is to use both types appropriately."
+    - text: "Inorganic fertilizers provide fast nutrient availability, while organic fertilizers enhance the soil’s health and water retention capacity."
+    - text: "A combination of both organic and inorganic fertilizers is recommended. Organic fertilizers enhance soil health, while inorganic ones offer immediate benefits to the crops."
+    - text: "Organic fertilizers improve the soil over time, while inorganic fertilizers provide quick nutrients for rapid growth. Both are essential in their own ways."
+
+  utter_fertilizer_nutrient_content:
+    - text: "Fertilizers for paddy crops should contain a balanced mix of nitrogen (N), phosphorus (P), and potassium (K). Nitrogen promotes leaf growth, phosphorus aids in root development, and potassium strengthens the plant’s resistance to diseases."
+    - text: "A well-balanced fertilizer mix for paddy should include nitrogen for leaf growth, phosphorus for root development, and potassium for disease resistance and overall plant health."
+    - text: "The key nutrients in paddy fertilizers are nitrogen (N), phosphorus (P), and potassium (K). Nitrogen supports leaf growth, phosphorus encourages root development, and potassium increases disease resistance."
+    - text: "The ideal fertilizer for paddy crops should contain nitrogen to boost foliage, phosphorus to promote root growth, and potassium to increase overall plant health and disease resistance."
+    - text: "For paddy cultivation, a balanced fertilizer mix with nitrogen, phosphorus, and potassium is crucial. Nitrogen helps the plant grow, phosphorus strengthens roots, and potassium boosts disease resistance."
+    - text: "The perfect fertilizer for paddy crops should have a balanced mix of nitrogen (N), phosphorus (P), and potassium (K), each playing a unique role in plant growth."
+    - text: "Nitrogen, phosphorus, and potassium are the primary nutrients for paddy crops. Nitrogen boosts vegetative growth, phosphorus helps roots, and potassium supports overall plant health."
+    - text: "For healthy paddy growth, ensure that fertilizers contain nitrogen for leaf development, phosphorus for strong roots, and potassium for improved disease resistance."
+    - text: "In paddy crops, fertilizers should have nitrogen for green growth, phosphorus for strong roots, and potassium to help the plants fight off diseases."
+    - text: "A well-balanced fertilizer for paddy crops must have nitrogen to promote leaf growth, phosphorus to strengthen roots, and potassium to enhance the plant's resilience against diseases."
+
+  utter_fertilizer_usage_guidelines:
+    - text: "To apply fertilizers effectively: 1) Apply fertilizers before transplanting. 2) Use split application during the growth stages. 3) Water the field after fertilizer application to help nutrients dissolve and reach the roots."
+    - text: "Fertilizer application should follow these steps: first, apply before transplanting; then, apply in split doses during the growing stages. Ensure the field is watered after application."
+    - text: "For effective fertilizer use, apply before transplanting, then apply in split doses at key growth stages. After application, water the field to help nutrients move into the soil."
+    - text: "Apply fertilizers before transplanting, use split applications during the crop's growth stages, and always water the field post-application to ensure nutrients are absorbed."
+    - text: "Apply fertilizers at the right stages: first before transplanting, and then in split doses throughout the growing season. Make sure to water the field afterward."
+    - text: "Fertilizers should be applied before transplanting and split during growth stages. Afterward, water the field to help nutrients reach the roots effectively."
+    - text: "For the best results, apply fertilizers before transplanting, during the tillering and flowering stages, and always water the field to aid nutrient absorption."
+    - text: "Make sure to apply fertilizers before transplanting, at key stages like tillering and flowering, and water the field after each application for better nutrient absorption."
+    - text: "To ensure proper nutrient uptake, apply fertilizers before transplanting and in split doses during growth stages. Don't forget to water the field after application."
+    - text: "For maximum fertilizer efficiency, apply before transplanting, split the application during growth stages, and water the field thoroughly to help nutrients dissolve."
+
+  utter_fertilizer_effect_on_yield:
+    - text: "Proper fertilization can significantly increase paddy yield by providing essential nutrients needed for healthy growth. Over-fertilization can lead to environmental issues, so it's important to follow recommended quantities."
+    - text: "Fertilization plays a critical role in boosting paddy yields. With proper application, crops can thrive, but overuse can lead to soil imbalances and pollution."
+    - text: "The correct use of fertilizers can increase paddy yield by supplying vital nutrients. However, excessive use may harm the environment and reduce the soil's long-term fertility."
+    - text: "Fertilizers directly impact paddy yield by ensuring adequate nutrient supply. Over-fertilization may reduce yield quality and damage the environment."
+    - text: "Applying the right amount of fertilizer helps improve paddy crop yield. Ensure you're not over-applying, as excessive use can harm soil health and the environment."
+    - text: "Proper fertilizer application can lead to higher yields by promoting healthier paddy plants. Be cautious of over-fertilization, as it can negatively impact the environment."
+    - text: "By applying fertilizers correctly, paddy yields can increase significantly. However, excessive fertilizer use can lead to nutrient leaching and harm the surrounding environment."
+    - text: "Fertilizer usage boosts paddy crop yield, but using more than necessary can cause long-term soil problems and environmental damage."
+    - text: "For high yields, proper fertilization is crucial. It ensures healthy plants, but overuse can harm the soil and reduce yields in the long run."
+    - text: "By following recommended fertilization guidelines, paddy yield can improve significantly. Always avoid over-fertilization to prevent environmental damage."
+
+  utter_fertilizer_suggestions:
+    - text: "For high yield in paddy, a combination of nitrogen, phosphorus, and potassium fertilizers is essential. For best results, I suggest using a balanced NPK fertilizer along with organic amendments like compost to improve soil structure."
+    - text: "To achieve a high yield, I recommend using a mix of nitrogen, phosphorus, and potassium fertilizers. Organic fertilizers like compost also help in building soil health."
+    - text: "A balanced fertilizer mix with nitrogen, phosphorus, and potassium is key for high paddy yields. Don't forget to add organic matter like compost to sustain soil quality."
+    - text: "For the best results, use NPK fertilizers in combination with organic compost. This will help improve both yield and long-term soil health."
+    - text: "To increase paddy yield, I suggest using a balanced NPK fertilizer. Adding organic amendments such as compost will further improve soil fertility."
+    - text: "The ideal fertilizer mix for high yields in paddy crops includes nitrogen, phosphorus, and potassium, along with organic fertilizers like compost."
+    - text: "For better yields, use a combination of NPK fertilizers and organic fertilizers like compost. This approach ensures both short-term and long-term soil health."
+    - text: "A good approach for high yield is using balanced NPK fertilizers alongside organic fertilizers like compost, which will also improve soil health over time."
+    - text: "For optimal growth, use a combination of NPK fertilizers with organic additives like compost. This will ensure strong plant growth and high yield."
+    - text: "For high yield, use a mix of nitrogen, phosphorus, potassium fertilizers, and organic fertilizers like compost. This approach will ensure balanced nutrition and improve soil fertility."
+
+  utter_fertilizer_preference_for_soil:
+    - text: "Different soils have varying nutrient needs. For sandy soils, organic fertilizers are ideal as they help improve water retention. Clay soils benefit from balanced fertilizers that prevent nutrient lock-up."
+    - text: "For loamy soil, a balanced mix of organic and synthetic fertilizers is ideal. Organic fertilizers improve soil structure, while synthetic ones provide quick nutrient availability."
+    - text: "Clay soils require fertilizers that prevent nutrient leaching, while sandy soils benefit from organic fertilizers that improve water retention and structure."
+    - text: "If you have acidic soil, you may prefer using lime-based fertilizers to balance the pH. Alkaline soils benefit from fertilizers with sulfur or ammonium compounds."
+    - text: "For acidic soils, lime or bone meal can be used to raise the pH, while for alkaline soils, sulfur or ammonium nitrate can help lower the pH."
+    - text: "Sandy soils are prone to nutrient loss, so organic matter or slow-release fertilizers are ideal. In contrast, clay soils retain nutrients but may need balanced fertilizers to avoid over-fertilization."
+    - text: "Soil testing is important to determine fertilizer needs. For nutrient-deficient soils, organic fertilizers or slow-release options are often recommended to improve long-term soil health."
+    - text: "If your soil is rich in organic matter, minimal use of chemical fertilizers might be sufficient. In nutrient-poor soils, a well-balanced fertilizer will support healthy plant growth."
+    - text: "Soils rich in organic matter prefer organic fertilizers, which improve soil structure and microbial health. Synthetic fertilizers can be used when there's a quick nutrient need."
+    - text: "The preference for fertilizers varies by soil type. For nutrient-poor soils, balanced chemical fertilizers may be necessary, while organic fertilizers work best for soils rich in organic matter."
+
+  utter_fertilizer_side_effects:
+    - text: "Excessive fertilizer use can cause nutrient imbalances, soil acidification, and even root damage. Always follow recommended dosages to prevent over-fertilization."
+    - text: "Overuse of fertilizers can lead to soil degradation, affecting soil health and making it harder for plants to absorb nutrients. It’s important to use the right amount."
+    - text: "Too much fertilizer can harm the environment by leaching into water sources, leading to pollution. Over-fertilization can also create an imbalance in the soil’s pH."
+    - text: "Excessive nitrogen in fertilizers can promote lush vegetative growth but may also make the plants more susceptible to diseases and pests."
+    - text: "Over-fertilizing can lead to soil acidity, which may reduce nutrient availability to the plants. It’s essential to monitor soil conditions regularly to prevent this."
+    - text: "High doses of fertilizers can damage root systems, impairing water and nutrient uptake. Always use fertilizers in moderation to ensure the health of the plant roots."
+    - text: "Excess fertilizers can alter the balance of soil microorganisms, reducing beneficial microbes and promoting harmful ones that may lead to diseases."
+    - text: "Too much fertilizer can lead to toxic build-up in the soil, affecting plant growth and sometimes causing plant toxicity. It’s essential to apply fertilizers according to specific needs."
+    - text: "While fertilizers provide essential nutrients, overuse can create a harmful surplus of salts in the soil, leading to poor plant growth and possible nutrient burn."
+    - text: "Excessive fertilizer use can cause the soil to become compacted, affecting water infiltration and root penetration. It’s best to use fertilizers based on soil tests for optimal results."
+
+actions:
+  - action_provide_disease_remedies
+  - action_provide_disease_precautions
+  - action_provide_disease_overview
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

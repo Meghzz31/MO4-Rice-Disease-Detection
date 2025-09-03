@@ -1,0 +1,65 @@
+{% extends 'base.html'%}
+{% load static %}
+
+{% block content %}
+
+{% include 'components/navbar.html' %}
+<nav style="--bs-breadcrumb-divider: '-';" aria-label="breadcrumb" class="py-3 align-middle bg-primary-subtle">
+    <div class="row container-fluid d-flex align-items-center justify-content-center">
+        <div class="col-auto me-auto ms-5">
+            <h4 class="text-dark">Detect Disease</h4>
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="{% url 'home'%}">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Upload</li>
+                <li class="breadcrumb-item active" aria-current="page">Detect Disease</li>
+            </ol>
+        </div>
+    </div>
+</nav>
+
+<div class="container-fluid py-5">
+    <div class="card rounded-0 p-5">
+        <div class="row">
+            <div class="col-12 col-md-6 col-lg-6 card rounded-0 p-4 shadow-sm">
+                <h3 class="card-title text-center">Upload File</h3>
+                <p class="card-text text-center">upload file to detect disease</p>
+
+                <form class="my-4" id="detectDiseaseForm" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <input type="hidden" id="farmer" name="farmer" value={{request.session.userId}}>
+                    <div class="mb-5">
+                        <label for="exampleInputPassword2" class="form-label">Upload Image</label>
+                        <input type="file" class="form-control" id="image" accept="image/*" name="image" required
+                            aria-label="Upload">
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100 text-center" id="submit">
+                        Detect disease
+                    </button>
+                    <button style="display: none;" class="btn btn-primary w-100" type="button" id="processing" disabled>
+                        <span class="spinner-grow spinner-grow-sm" aria-hidden="true"></span>
+                        <span role="status">Processing...</span>
+                    </button>
+                </form>
+            </div>
+            <div class="col-12 col-md-6 col-lg-6">
+                <div class="text-center align-middle">
+                    <img src="{% static 'images/first.jpg' %}" class="rounded  object-fit-cover  " alt="Crop Image"
+                        width="400" height="300" id="previewImage">
+
+                    <h5 class="card-title text-center mt-3" id="disease_name"></h5>
+
+                </div>
+
+            </div>
+            <div class="container-fluid pt-5" id="details-block">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script src="{% static 'js/upload.js' %}"></script>
+
+{% endblock content %}

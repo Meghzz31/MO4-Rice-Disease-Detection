@@ -1,0 +1,114 @@
+version: "3.1"
+stories:
+  - story: greet and ask overview
+    steps:
+      - intent: greet
+      - action: utter_greet
+      - intent: ask_overview
+      - action: utter_ask_overview
+
+  - story: ask precautions
+    steps:
+      - intent: ask_precautions
+      - action: utter_ask_precautions
+
+  - story: ask remedies
+    steps:
+      - intent: ask_remedies
+      - action: utter_ask_remedies
+
+  - story: ask growth stages
+    steps:
+      - intent: ask_growth_stage
+      - action: utter_ask_growth_stage
+
+  - story: ask yield
+    steps:
+      - intent: ask_yield
+      - action: utter_ask_yield
+
+  - story: ask diseases
+    steps:
+      - intent: ask_diseases
+      - action: utter_ask_diseases
+
+  - story: ask soil requirements
+    steps:
+      - intent: ask_soil_requirements
+      - action: utter_ask_soil_requirements
+
+  - story: goodbye
+    steps:
+      - intent: goodbye
+      - action: utter_goodbye
+
+  - story: ask disease overview
+    steps:
+      - intent: ask_disease_overview
+        entities:
+          - disease: blast
+      - action: action_provide_disease_overview
+
+  - story: ask disease precautions
+    steps:
+      - intent: ask_disease_precautions
+        entities:
+          - disease: bacterial blight
+      - action: action_provide_disease_precautions
+
+  - story: ask disease remedies
+    steps:
+      - intent: ask_disease_remedies
+        entities:
+          - disease: sheath blight
+      - action: action_provide_disease_remedies
+
+  - story: Fertilizer Types
+    steps:
+      - intent: ask_fertilizer_types
+      - action: utter_fertilizer_types
+
+  - story: Fertilizer Application Time
+    steps:
+      - intent: ask_fertilizer_application_time
+      - action: utter_fertilizer_application_time
+
+  - story: Fertilizer Quantity
+    steps:
+      - intent: ask_fertilizer_quantity
+      - action: utter_fertilizer_quantity
+
+  - story: Organic vs Inorganic Fertilizer
+    steps:
+      - intent: ask_fertilizer_organic_vs_inorganic
+      - action: utter_fertilizer_organic_vs_inorganic
+
+  - story: Fertilizer Nutrient Content
+    steps:
+      - intent: ask_fertilizer_nutrient_content
+      - action: utter_fertilizer_nutrient_content
+
+  - story: Fertilizer Usage Guidelines
+    steps:
+      - intent: ask_fertilizer_usage_guidelines
+      - action: utter_fertilizer_usage_guidelines
+
+  - story: Fertilizer Effect on Yield
+    steps:
+      - intent: ask_fertilizer_effect_on_yield
+      - action: utter_fertilizer_effect_on_yield
+
+  - story: Fertilizer Suggestions
+    steps:
+      - intent: ask_fertilizer_suggestions
+      - action: utter_fertilizer_suggestions
+
+  - story: Fertilizer for Different Soil Types
+    steps:
+      - intent: ask_fertilizer_preference_for_soil
+      - action: utter_fertilizer_preference_for_soil
+
+  - story: Fertilizer Side Effects
+    steps:
+      - intent: ask_fertilizer_side_effects
+      - action: utter_fertilizer_side_effects

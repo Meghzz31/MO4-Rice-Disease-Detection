@@ -1,0 +1,43 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment variables and system files
+.env
+*.env
+*.DS_Store
+*.log
+
+# Virtual environments
+venv/
+.env/
+
+# Rasa specific files and folders
+*.db
+models/
+results/
+*.rasa
+**/*.lock
+**/.DS_Store
+rasa.db
+events.db
+
+# Training artifacts
+__temp/
+**/*.tmp
+**/tmp/
+cache/
+*.cache
+
+# Jupyter notebooks
+.ipynb_checkpoints
+
+# VS Code
+.vscode/
+.history/
+
+# Logs and temporary files
+logs/
+debug.log
+output.log
